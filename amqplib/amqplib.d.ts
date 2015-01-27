@@ -87,7 +87,7 @@ declare module "amqplib/callback_api" {
     unbindExchange(destination, source, pattern, args, callback?: (err: any, ok: any) => void): void;
     publish(exchange, routingKey, content, options?);
     sendToQueue(queue: string, content: any, options?);
-    comsume(queue: string, handler: (msg: any) => void, options?, callback?: (err: any, ok: any) => void): void;
+    consume(queue: string, handler: (msg: any) => void, options?, callback?: (err: any, ok: any) => void): void;
     cancel(consumerTag, callback?: (err: any, ok: any) => void): void;
     get(queue: string, options?: any, callback?: (err: any, msgOrFalse: any) => void): void;
     ack(message, allUpTo?: any);
