@@ -7,12 +7,16 @@
 /// <reference path="../mongoose/mongoose.d.ts" />
 /// <reference path="../redis/redis.d.ts" />
 /// <reference path="../restify/restify.d.ts" />
+/// <reference path="../amqplib/amqplib.d.ts" />
+/// <reference path="../socket.io/socket.io.d.ts" />
 
 declare module "vertex" {
   import Promise = require('bluebird');
   import mongoose = require('mongoose');
   import redis = require('redis');
   import restify = require('restify');
+  import amqp = require('amqplib/callback_api');
+  import io = require('socket.io');
 
   export interface AMQPAdapterOptions {
       url: string;
@@ -51,12 +55,12 @@ declare module "vertex" {
    * ServiceOptions
    * @interface
    */
-  export ServiceOptions {
-    mongoose?: mongooseAdapterOptions;
-    redis?: redisAdapterOptions;
-    restify?: restifyAdapterOptions;
-    amqp?: amqpAdapterOptions;
-    socketio?: socketioAdapterOptions;
+  export interface ServiceOptions {
+    mongoose?: MongooseAdapterOptions;
+    redis?: RedisAdapterOptions;
+    restify?: RestifyAdapterOptions;
+    amqp?: AMQPAdapterOptions;
+    socketio?: SocketIOAdapterOptions;
   }
 
   /**
