@@ -111,7 +111,7 @@ declare module "vertex" {
     /**
      * @param {AbstractController} Class
      */
-    addController(Class: typeof AbstractController): void;
+    registerController(Class: typeof AbstractController): void;
     /**
      * @returns {Promise<void>}
      * @final
