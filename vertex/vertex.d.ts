@@ -46,6 +46,10 @@ declare module "vertex" {
     setSession(sid: string, session: any): Promise<any>;
     deleteSession(sid: string): Promise<void>;
   }
+
+  export interface IToken {
+    sid: string;
+  }
   
   export interface SocketIOAdapterOptions {
     port: number;
