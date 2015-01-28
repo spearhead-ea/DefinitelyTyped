@@ -172,9 +172,9 @@ declare module "vertex" {
   /**
    * RestifyAdapter
    * @class
-   * @extends ListenableAdapter<T>
+   * @extends ListenableAdapter
    */
-  export class RestifyAdapter<T> extends ListenableAdapter<restify.Server, RestifyAdapterOptions> {
+  export class RestifyAdapter extends ListenableAdapter<restify.Server, RestifyAdapterOptions> {
     /**
      * Initialize the restify server.
      * @override
