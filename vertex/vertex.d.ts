@@ -36,6 +36,7 @@ declare module "vertex" {
 
   export interface RestifyAdapterOptions {
     serverOptions?: restify.ServerOptions;
+    middlewares?: restify.RequestHandler[];
     store: ISessionStore;
     port: number;
     secret: string;
