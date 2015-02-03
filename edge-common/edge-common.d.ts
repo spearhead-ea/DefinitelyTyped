@@ -1,16 +1,16 @@
 /// <reference path="../restify/restify.d.ts" />
-/// <reference path="../vertex/vertex.d.ts" />
+/// <reference path="../island/island.d.ts" />
 
 declare module "edge-common" {
   import restify = require('restify');
-  import vertex = require('vertex');
+  import island = require('island');
 
   export interface Request extends restify.Request {
     token?: IToken;
     session?: ISession;
   }
 
-  export interface IToken extends vertex.IToken {
+  export interface IToken extends island.IToken {
     aid: string;
     aname: string;
   }
