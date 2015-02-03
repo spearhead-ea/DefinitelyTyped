@@ -208,34 +208,34 @@ declare module "island" {
   }
 
   /**
-   * Create a new Island.
+   * Create a new Islet.
    * @abstract
    * @class
    */
-  export class Island {
-    private static island: Island;
+  export class Islet {
+    private static island: Islet;
 
     /**
      * Register the island which is the suite of micro-service
      * @param {Microservice} service
      * @static
      */
-    static registerIsland(island: Island): void;
+    static registerIslet(island: Islet): void;
 
     /**
      * Retrieves a registered micro-service.
      * @returns {Microservice}
      * @static
      */
-    static getIsland(): Island;
-    static getIsland<T>(): T;
+    static getIslet(): Islet;
+    static getIslet<T>(): T;
 
     /**
      * Instantiate and run a microservice.
      * @param {Microservice} Class
      * @static
      */
-    static run(Class: typeof Island): Promise<any[]>;
+    static run(Class: typeof Islet): Promise<any[]>;
 
     /** @type {Object.<string, IAbstractAdapter>} [adapters={}] */
     private adapters;
