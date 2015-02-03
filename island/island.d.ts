@@ -1,5 +1,5 @@
-// Type definitions for vertex 0.0.3
-// Project: https://github.com/wokim/vertex
+// Type definitions for island 0.0.4
+// Project: https://github.com/wokim/island
 // Definitions by: Wonshik Kim <https://github.com/wokim/>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
 
@@ -10,7 +10,7 @@
 /// <reference path="../amqplib/amqplib.d.ts" />
 /// <reference path="../socket.io/socket.io.d.ts" />
 
-declare module "vertex" {
+declare module "island" {
   import Promise = require('bluebird');
   import mongoose = require('mongoose');
   import redis = require('redis');
@@ -208,34 +208,34 @@ declare module "vertex" {
   }
 
   /**
-   * Create a new Vertex.
+   * Create a new Island.
    * @abstract
    * @class
    */
-  export class Vertex {
-    private static vertex: Vertex;
+  export class Island {
+    private static island: Island;
 
     /**
-     * Register the vertex which is the suite of micro-service
+     * Register the island which is the suite of micro-service
      * @param {Microservice} service
      * @static
      */
-    static registerVertex(vertex: Vertex): void;
+    static registerIsland(island: Island): void;
 
     /**
      * Retrieves a registered micro-service.
      * @returns {Microservice}
      * @static
      */
-    static getVertex(): Vertex;
-    static getVertex<T>(): T;
+    static getIsland(): Island;
+    static getIsland<T>(): T;
 
     /**
      * Instantiate and run a microservice.
      * @param {Microservice} Class
      * @static
      */
-    static run(Class: typeof Vertex): Promise<any[]>;
+    static run(Class: typeof Island): Promise<any[]>;
 
     /** @type {Object.<string, IAbstractAdapter>} [adapters={}] */
     private adapters;

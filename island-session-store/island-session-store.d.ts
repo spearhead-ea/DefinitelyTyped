@@ -1,16 +1,16 @@
-// Type definitions for vertex-session-store 0.0.1
-// Project: https://github.com/wokim/vertex-session-store
+// Type definitions for island-session-store 0.0.2
+// Project: https://github.com/wokim/island-session-store
 // Definitions by: Wonshik Kim <https://github.com/wokim/>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
 
-/// <reference path="../vertex/vertex.d.ts" />
+/// <reference path="../island/island.d.ts" />
 /// <reference path="../bluebird/bluebird.d.ts" />
 
-declare module "vertex-session-store" {
-  import vertex = require('vertex');
+declare module "island-session-store" {
+  import island = require('island');
   import Promise = require('bluebird');
 
-  export class SessionStore implements vertex.ISessionStore {
+  export class SessionStore implements island.ISessionStore {
     private static instance;
     private prefix;
     private initialized;
@@ -18,7 +18,7 @@ declare module "vertex-session-store" {
     private static TTL;
     constructor();
     static getInstance(): SessionStore;
-    initialize(options?: vertex.RedisAdapterOptions): void;
+    initialize(options?: island.RedisAdapterOptions): void;
     private getRedisKey(sid);
     /**
      * Gets a session.
