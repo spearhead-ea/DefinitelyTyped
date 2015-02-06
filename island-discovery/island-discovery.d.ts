@@ -9,12 +9,9 @@ declare module "island-discovery" {
   import Promise = require('bluebird');
   export class IslandDiscovery {
     private etcd;
-    constructor(url: string);
-    getKey<T>(url: string, options?: {
-      wait?: boolean;
-    }): Promise<T>;
-    getKeys(urls: string[], options?: {
-      wait?: boolean;
-    }): Promise<any[]>;
+    constructor(host: string, port?: number);
+    private parseNode(obj, node);
+    getKey(url: string, options?: any): Promise<any>;
+    getKeys(urls: string[], options?: any): Promise<any[]>;
   }
 }
