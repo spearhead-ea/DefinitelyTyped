@@ -1,4 +1,4 @@
-// Type definitions for island 0.0.7
+// Type definitions for island 0.0.8
 // Project: https://github.com/wokim/island
 // Definitions by: Wonshik Kim <https://github.com/wokim/>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
@@ -54,18 +54,6 @@ declare module "island" {
   
   export interface SocketIOAdapterOptions {
     port: number;
-  }
-
-  /**
-   * ServiceOptions
-   * @interface
-   */
-  export interface ServiceOptions {
-    mongoose?: MongooseAdapterOptions;
-    redis?: RedisAdapterOptions;
-    restify?: RestifyAdapterOptions;
-    amqp?: AMQPAdapterOptions;
-    socketio?: SocketIOAdapterOptions;
   }
 
   /**
@@ -257,9 +245,9 @@ declare module "island" {
 
     /**
      * @abstract
-     * @param {ServiceOptions} options
+     * @param {any} options
      */
-    main(options: ServiceOptions): void;
+    main(options: any): void;
 
     /**
      * @returns {Promise<void>}
