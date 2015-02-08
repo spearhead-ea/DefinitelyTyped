@@ -1,4 +1,4 @@
-// Type definitions for island-session-store 0.0.2
+// Type definitions for island-session-store 0.0.3
 // Project: https://github.com/wokim/island-session-store
 // Definitions by: Wonshik Kim <https://github.com/wokim/>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
@@ -18,7 +18,7 @@ declare module "island-session-store" {
     private static TTL;
     constructor();
     static getInstance(): SessionStore;
-    initialize(options?: island.RedisAdapterOptions): void;
+    initialize(options?: island.RedisAdapterOptions): SessionStore;
     private getRedisKey(sid);
     /**
      * Gets a session.
