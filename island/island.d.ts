@@ -1,4 +1,4 @@
-// Type definitions for island 0.0.4
+// Type definitions for island 0.0.7
 // Project: https://github.com/wokim/island
 // Definitions by: Wonshik Kim <https://github.com/wokim/>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
@@ -236,6 +236,7 @@ declare module "island" {
      * @static
      */
     static run(Class: typeof Islet): Promise<any[]>;
+    static run(config: Promise<any>, Class: typeof Islet): Promise<any[]>;
 
     /** @type {Object.<string, IAbstractAdapter>} [adapters={}] */
     private adapters;
