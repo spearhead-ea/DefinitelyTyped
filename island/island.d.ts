@@ -1,4 +1,4 @@
-// Type definitions for island 0.0.8
+// Type definitions for island 0.0.9
 // Project: https://github.com/wokim/island
 // Definitions by: Wonshik Kim <https://github.com/wokim/>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
@@ -9,6 +9,8 @@
 /// <reference path="../restify/restify.d.ts" />
 /// <reference path="../amqplib/amqplib.d.ts" />
 /// <reference path="../socket.io/socket.io.d.ts" />
+/// <reference path="../commander/commander.d.ts" />
+/// <reference path="../debug/debug.d.ts" />
 
 declare module "island" {
   import Promise = require('bluebird');
@@ -17,10 +19,15 @@ declare module "island" {
   import restify = require('restify');
   import amqp = require('amqplib/callback_api');
   import io = require('socket.io');
+  import debug = require('debug');
+
+  export function debug(namespace: string): debug.Debugger;
+  export function error(namespace: string): debug.Debugger;
+  export var argv: ICommand;
 
   export interface AMQPAdapterOptions {
-      url: string;
-      socketOptions?: amqp.SocketOptions;
+    url: string;
+    socketOptions?: amqp.SocketOptions;
   }
 
   export interface MongooseAdapterOptions {
@@ -51,7 +58,7 @@ declare module "island" {
   export interface IToken {
     sid: string;
   }
-  
+
   export interface SocketIOAdapterOptions {
     port: number;
   }
@@ -71,6 +78,16 @@ declare module "island" {
    */
   export interface IListenableAdapter extends IAbstractAdapter {
     listen(): Promise<void>;
+  }
+
+  export interface ICommand extends commander.IExportedCommand {
+    host: string;
+    port: number;
+    etcdServer: {
+      host: string;
+      port: number;
+    };
+    serviceName: string;
   }
 
   /**
@@ -201,15 +218,13 @@ declare module "island" {
    * @class
    */
   export class Islet {
-    private static island: Islet;
-
+    private static islet;
     /**
-     * Register the island which is the suite of micro-service
-     * @param {Microservice} service
+     * Register the islet which is the suite of micro-service
+     * @param {Islet} islet
      * @static
      */
-    static registerIslet(island: Islet): void;
-
+    private static registerIslet(islet);
     /**
      * Retrieves a registered micro-service.
      * @returns {Microservice}
@@ -217,7 +232,6 @@ declare module "island" {
      */
     static getIslet(): Islet;
     static getIslet<T>(): T;
-
     /**
      * Instantiate and run a microservice.
      * @param {Microservice} Class
@@ -225,35 +239,29 @@ declare module "island" {
      */
     static run(Class: typeof Islet): Promise<any[]>;
     static run(config: Promise<any>, Class: typeof Islet): Promise<any[]>;
-
     /** @type {Object.<string, IAbstractAdapter>} [adapters={}] */
     private adapters;
-
     /**
      * Register the adapter.
      * @param {string} name
      * @param {IAbstractAdapter} adapter
      */
     registerAdapter(name: string, adapter: IAbstractAdapter): void;
-
     /**
      * @param {string} name
      * @returns {typeof Adapter}
      */
     getAdaptee<T>(name: string): T;
     getAdaptee(name: string): any;
-
     /**
      * @abstract
-     * @param {any} options
+     * @param {any} config
      */
-    main(options: any): void;
-
+    main(config: any): void;
     /**
      * @returns {Promise<void>}
      */
     initialize(): Promise<any[]>;
-
     /**
      * @returns {Promise<void>}
      */
