@@ -1,7 +1,7 @@
 /// <reference path="../restify/restify.d.ts" />
 /// <reference path="../island/island.d.ts" />
 
-declare module "edge-common" {
+declare module "edge-interface" {
   import restify = require('restify');
   import island = require('island');
 
