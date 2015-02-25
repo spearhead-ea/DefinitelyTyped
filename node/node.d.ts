@@ -1,11 +1,11 @@
-// Type definitions for Node.js v0.10.1
+// Type definitions for Node.js v0.12.0
 // Project: http://nodejs.org/
 // Definitions by: Microsoft TypeScript <http://typescriptlang.org>, DefinitelyTyped <https://github.com/borisyankov/DefinitelyTyped>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
 
 /************************************************
 *                                               *
-*               Node.js v0.10.1 API             *
+*               Node.js v0.12.0 API             *
 *                                               *
 ************************************************/
 
@@ -250,8 +250,8 @@ declare module "buffer" {
 declare module "querystring" {
     export function stringify(obj: any, sep?: string, eq?: string): string;
     export function parse(str: string, sep?: string, eq?: string, options?: { maxKeys?: number; }): any;
-    export function escape(): any;
-    export function unescape(): any;
+    export function escape(str: string): string;
+    export function unescape(str: string): string;
 }
 
 declare module "events" {
