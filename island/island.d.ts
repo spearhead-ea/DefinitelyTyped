@@ -11,6 +11,7 @@
 /// <reference path="../socket.io/socket.io.d.ts" />
 /// <reference path="../commander/commander.d.ts" />
 /// <reference path="../debug/debug.d.ts" />
+/// <reference path="../bl/bl.d.ts" />
 
 declare module "island" {
   import Promise = require('bluebird');
