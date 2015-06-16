@@ -331,6 +331,11 @@ declare class Promise<R> implements Promise.Thenable<R>, Promise.Inspection<R> {
 	filter<U>(filterer: (item: U, index: number, arrayLength: number) => Promise.Thenable<boolean>): Promise<U[]>;
 	filter<U>(filterer: (item: U, index: number, arrayLength: number) => boolean): Promise<U[]>;
 
+  /**
+   * A meta method used to specify the disposer method that cleans up a resource when using using()
+   */
+  disposer(disposer: (value: R, promise: Promise<R>) => any): Promise.Disposer<R>;
+
 	/**
 	 * Start the chain of promises with `Promise.try`. Any synchronous exceptions will be turned into rejections on the returned promise.
 	 *
@@ -604,6 +609,13 @@ declare class Promise<R> implements Promise.Thenable<R>, Promise.Inspection<R> {
 	// array with values
 	static filter<R>(values: R[], filterer: (item: R, index: number, arrayLength: number) => Promise.Thenable<boolean>): Promise<R[]>;
 	static filter<R>(values: R[], filterer: (item: R, index: number, arrayLength: number) => boolean): Promise<R[]>;
+
+  /**
+   * In conjunction with .disposer(), using will make sure that no matter what, the specified disposer will be called when the promise returned by the callback passed to using has settled. The disposer is necessary because there is no standard interface in node for disposing resources.
+   */
+  static using<R, T1>(disposer: Promise.Disposer<T1>, handler: (v: T1) => any): Promise<R>;
+  static using<R, T1, T2>(d1: Promise.Disposer<T1>, d2: Promise.Disposer<T2>, handler: (v: T1, v2: T2) => any): Promise<R>;
+  static using<R, T1, T2, T3>(d1: Promise.Disposer<T1>, d2: Promise.Disposer<T2>, d3: Promise.Disposer<T3>, handler: (v: T1, v2: T2, v3: T3) => any): Promise<R>;
 }
 
 declare module Promise {
@@ -700,6 +712,9 @@ declare module Promise {
 		 */
 		reason(): any;
 	}
+
+  export interface Disposer<R> extends Thenable<R> {
+  }
 
 	/**
 	 * Changes how bluebird schedules calls a-synchronously.
