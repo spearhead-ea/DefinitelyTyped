@@ -41,6 +41,8 @@ declare module "knex" {
     fn: any;
   }
 
+  function Knex( config : Config ) : Knex;
+
   //
   // QueryInterface
   //
@@ -307,13 +309,13 @@ declare module "knex" {
   }
 
   interface SchemaBuilder {
-    createTable(tableName: string, callback: (tableBuilder: CreateTableBuilder) => any): void;
-    renameTable(oldTableName: string, newTableName: string): void;
-    dropTable(tableName: string): void;
+    createTable(tableName: string, callback: (tableBuilder: CreateTableBuilder) => any): Promise<void>;
+    renameTable(oldTableName: string, newTableName: string): Promise<void>;
+    dropTable(tableName: string): Promise<void>;
     hasTable(tableName: string): Promise<boolean>;
     hasColumn(tableName: string, columnName: string): Promise<boolean>;
-    table(tableName: string, callback: (tableBuilder: AlterTableBuilder) => any): void;
-    dropTableIfExists(tableName: string): void;
+    table(tableName: string, callback: (tableBuilder: AlterTableBuilder) => any): Promise<void>;
+    dropTableIfExists(tableName: string): Promise<void>;
     raw(statement: string): SchemaBuilder;
   }
 
@@ -341,6 +343,9 @@ declare module "knex" {
     uuid(columnName: string): ColumnBuilder;
     comment(val: string): TableBuilder;
     specificType(columnName: string, type: string): ColumnBuilder;
+    primary(columnNames: string[]) : TableBuilder;
+    index(columnNames: string[], indexName?: string, indexType?: string) : TableBuilder;
+    unique(columnNames: string[], indexName?: string) : TableBuilder;    
   }
 
   interface CreateTableBuilder extends TableBuilder {
@@ -452,6 +457,5 @@ declare module "knex" {
     tableName?: string;
   }
 
-  var _: KnexStatic;
-  export = _;
+  export = Knex;
 }

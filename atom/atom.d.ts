@@ -591,7 +591,7 @@ declare module AtomCore {
 		getTextInRange(range:any):any;
 		getLineCount():number;
 		getBuffer():TextBuffer.ITextBuffer;
-		getUri():string;
+		getURI():string;
 		isBufferRowBlank(bufferRow:any):boolean;
 		isBufferRowCommented(bufferRow:any):void;
 		nextNonBlankBufferRow(bufferRow:any):void;
@@ -886,8 +886,8 @@ declare module AtomCore {
 		saveItem(item:any, nextAction:Function):void;
 		saveItemAs(item:any, nextAction:Function):void;
 		saveItems():any[];
-		itemForUri(uri:any):any;
-		activateItemForUri(uri:any):any;
+		itemForURI(uri:any):any;
+		activateItemForURI(uri:any):any;
 		copyActiveItem():void;
 		splitLeft(params:any):IPane;
 		splitRight(params:any):IPane;
@@ -978,7 +978,7 @@ declare module AtomCore {
 		open(uri:string, options:any):Q.Promise<View>;
 		openLicense():void;
 		openSync(uri:string, options:any):any;
-		openUriInPane(uri:string, pane:any, options:any):Q.Promise<View>;
+		openURIInPane(uri:string, pane:any, options:any):Q.Promise<View>;
 		reopenItemSync():any;
 		registerOpener(opener:(urlToOpen:string)=>any):void;
 		unregisterOpener(opener:Function):void;
@@ -988,7 +988,7 @@ declare module AtomCore {
 		saveAll():void;
 		activateNextPane():any;
 		activatePreviousPane():any;
-		paneForUri: (uri:string) => IPane;
+		paneForURI: (uri:string) => IPane;
 		saveActivePaneItem():any;
 		saveActivePaneItemAs():any;
 		destroyActivePaneItem():any;
@@ -1145,6 +1145,18 @@ declare module AtomCore {
 		new(state:IAtomState):IAtom;
 	}
 
+	class Disposable {
+		constructor(disposalAction:any)
+		dispose():void
+	}
+
+	class CommandRegistry {
+		add(target:string, commandName:string, callback:Function):Disposable
+		findCommands(params:Object):Object[]
+		dispatch(target:any,commandName:string):void
+	}
+
+
 	// https://atom.io/docs/api/v0.106.0/api/classes/Atom.html
 	/* Global Atom class : instance members */
 	interface IAtom {
@@ -1174,6 +1186,8 @@ declare module AtomCore {
 		workspaceView: IWorkspaceView;
 		workspace: IWorkspace;
 		// really exists? end
+
+		commands: CommandRegistry;
 
 		initialize:Function;
 		// registerRepresentationClass:Function;
@@ -1753,6 +1767,8 @@ declare module "atom" {
 
 		cancel():any;
 	}
+
+
 
 	var WorkspaceView:AtomCore.IWorkspaceViewStatic;
 
