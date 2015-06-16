@@ -140,6 +140,9 @@ var barInspection: Promise.Inspection<Bar>;
 var fooInspectionArrProm: Promise<Promise.Inspection<Foo>[]>;
 var barInspectionArrProm: Promise<Promise.Inspection<Bar>[]>;
 
+var fooDisposer: Promise.Disposer<Foo>;
+var barDisposer: Promise.Disposer<Bar>;
+
 var BlueBird: typeof Promise;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -519,6 +522,11 @@ fooArrProm = fooArrProm.filter<Foo>((item: Foo) => {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+fooDisposer = fooProm.disposer((value: Foo, promise: Promise<Foo>) => {
+  return value;
+});
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 fooProm = Promise.try(() => {
 	return foo;
@@ -895,3 +903,16 @@ fooArrProm = Promise.filter(fooArr, (item: Foo, index: number, arrayLength: numb
 });
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// using()
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// fooDisposer
+
+anyProm = Promise.using(fooDisposer, (foo) => {
+  return value;
+});
+anyProm = Promise.using(fooDisposer, barDisposer, (foo, bar) => {
+  return value;
+});
