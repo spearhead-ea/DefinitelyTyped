@@ -3,8 +3,6 @@
 // Definitions by: Wonshik Kim <https://github.com/wokim/>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
 
-/// <reference path="../../typings/tsd.d.ts" />
-/* 로컬에서 이 파일을 참조하다보니 아래 path resolve 문제가 생겨서 일반적인 reference path를 사용할 수 없다
 /// <reference path="../bluebird/bluebird.d.ts" />
 /// <reference path="../mongoose/mongoose.d.ts" />
 /// <reference path="../redis/redis.d.ts" />
@@ -13,7 +11,6 @@
 /// <reference path="../socket.io/socket.io.d.ts" />
 /// <reference path="../commander/commander.d.ts" />
 /// <reference path="../debug/debug.d.ts" />
-*/
 
 declare module "island" {
   import Promise = require('bluebird');
