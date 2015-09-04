@@ -1,0 +1,685 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/Users/donglee/.nvm/v0.10.36/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'redis',
+1 verbose cli   'then-redis' ]
+2 info using npm@2.9.1
+3 info using node@v0.10.36
+4 verbose install initial load of /Users/donglee/git/DefinitelyTyped/package.json
+5 verbose installManyTop reading scoped package data from /Users/donglee/git/DefinitelyTyped/node_modules/bluebird/package.json
+6 verbose installManyTop reading scoped package data from /Users/donglee/git/DefinitelyTyped/node_modules/definition-tester/package.json
+7 verbose installManyTop reading scoped package data from /Users/donglee/git/DefinitelyTyped/node_modules/redis/package.json
+8 verbose installManyTop reading scoped package data from /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/package.json
+9 verbose installManyTop reading scoped package data from /Users/donglee/git/DefinitelyTyped/node_modules/typescript/package.json
+10 verbose readDependencies loading dependencies from /Users/donglee/git/DefinitelyTyped/package.json
+11 verbose readDependencies npm-shrinkwrap.json is overriding dependencies
+12 info shrinkwrap file "/Users/donglee/git/DefinitelyTyped/npm-shrinkwrap.json"
+13 verbose readDependencies returned deps { 'definition-tester': 'https://registry.npmjs.org/definition-tester/-/definition-tester-0.2.0.tgz',
+13 verbose readDependencies returned deps   typescript: 'https://registry.npmjs.org/typescript/-/typescript-1.5.3.tgz' }
+14 verbose install redis is installed as 0.12.1
+15 silly cache add args [ 'redis', null ]
+16 verbose cache add spec redis
+17 verbose install then-redis is installed as 1.3.0
+18 silly cache add args [ 'then-redis', null ]
+19 verbose cache add spec then-redis
+20 silly cache add parsed spec { raw: 'redis',
+20 silly cache add   scope: null,
+20 silly cache add   name: 'redis',
+20 silly cache add   rawSpec: '',
+20 silly cache add   spec: '*',
+20 silly cache add   type: 'range' }
+21 silly addNamed redis@*
+22 verbose addNamed "*" is a valid semver range for redis
+23 silly addNameRange { name: 'redis', range: '*', hasData: false }
+24 silly mapToRegistry name redis
+25 silly mapToRegistry using default registry
+26 silly mapToRegistry registry https://registry.npmjs.org/
+27 silly mapToRegistry uri https://registry.npmjs.org/redis
+28 verbose addNameRange registry:https://registry.npmjs.org/redis not in flight; fetching
+29 silly cache add parsed spec { raw: 'then-redis',
+29 silly cache add   scope: null,
+29 silly cache add   name: 'then-redis',
+29 silly cache add   rawSpec: '',
+29 silly cache add   spec: '*',
+29 silly cache add   type: 'range' }
+30 silly addNamed then-redis@*
+31 verbose addNamed "*" is a valid semver range for then-redis
+32 silly addNameRange { name: 'then-redis', range: '*', hasData: false }
+33 silly mapToRegistry name then-redis
+34 silly mapToRegistry using default registry
+35 silly mapToRegistry registry https://registry.npmjs.org/
+36 silly mapToRegistry uri https://registry.npmjs.org/then-redis
+37 verbose addNameRange registry:https://registry.npmjs.org/then-redis not in flight; fetching
+38 verbose request uri https://registry.npmjs.org/redis
+39 verbose request no auth needed
+40 info attempt registry request try #1 at 15:35:02
+41 verbose request id cb26ef6b09285c28
+42 verbose etag "9WE2JZ8NC76MNPNDN0J6KBBBF"
+43 http request GET https://registry.npmjs.org/redis
+44 verbose request uri https://registry.npmjs.org/then-redis
+45 verbose request no auth needed
+46 info attempt registry request try #1 at 15:35:02
+47 verbose etag "519O7IO0WHGDJ9LYFVBGW07UF"
+48 http request GET https://registry.npmjs.org/then-redis
+49 http 304 https://registry.npmjs.org/redis
+50 silly get cb [ 304,
+50 silly get   { date: 'Fri, 04 Sep 2015 06:35:02 GMT',
+50 silly get     via: '1.1 varnish',
+50 silly get     'cache-control': 'max-age=60',
+50 silly get     etag: '"9WE2JZ8NC76MNPNDN0J6KBBBF"',
+50 silly get     age: '3',
+50 silly get     connection: 'keep-alive',
+50 silly get     'x-served-by': 'cache-nrt6127-NRT',
+50 silly get     'x-cache': 'HIT',
+50 silly get     'x-cache-hits': '1',
+50 silly get     'x-timer': 'S1441348502.312150,VS0,VE1',
+50 silly get     vary: 'Accept' } ]
+51 verbose etag https://registry.npmjs.org/redis from cache
+52 verbose get saving redis to /Users/donglee/.npm/registry.npmjs.org/redis/.cache.json
+53 silly addNameRange number 2 { name: 'redis', range: '*', hasData: true }
+54 silly addNameRange versions [ 'redis',
+54 silly addNameRange   [ '0.0.1',
+54 silly addNameRange     '0.0.2',
+54 silly addNameRange     '0.0.3',
+54 silly addNameRange     '0.0.4',
+54 silly addNameRange     '0.0.7',
+54 silly addNameRange     '0.0.8',
+54 silly addNameRange     '0.1.0',
+54 silly addNameRange     '0.1.1',
+54 silly addNameRange     '0.1.2',
+54 silly addNameRange     '0.2.0',
+54 silly addNameRange     '0.2.1',
+54 silly addNameRange     '0.2.2',
+54 silly addNameRange     '0.2.3',
+54 silly addNameRange     '0.2.4',
+54 silly addNameRange     '0.2.6',
+54 silly addNameRange     '0.3.0',
+54 silly addNameRange     '0.3.1',
+54 silly addNameRange     '0.3.2',
+54 silly addNameRange     '0.3.3',
+54 silly addNameRange     '0.3.4',
+54 silly addNameRange     '0.3.5',
+54 silly addNameRange     '0.3.6',
+54 silly addNameRange     '0.3.7',
+54 silly addNameRange     '0.3.9',
+54 silly addNameRange     '0.4.0',
+54 silly addNameRange     '0.4.1',
+54 silly addNameRange     '0.4.2',
+54 silly addNameRange     '0.5.0',
+54 silly addNameRange     '0.5.1',
+54 silly addNameRange     '0.5.2',
+54 silly addNameRange     '0.5.3',
+54 silly addNameRange     '0.5.4',
+54 silly addNameRange     '0.5.5',
+54 silly addNameRange     '0.5.6',
+54 silly addNameRange     '0.5.7',
+54 silly addNameRange     '0.5.8',
+54 silly addNameRange     '0.5.9',
+54 silly addNameRange     '0.5.10',
+54 silly addNameRange     '0.5.11',
+54 silly addNameRange     '0.6.0',
+54 silly addNameRange     '0.6.1',
+54 silly addNameRange     '0.6.2',
+54 silly addNameRange     '0.6.3',
+54 silly addNameRange     '0.6.4',
+54 silly addNameRange     '0.6.5',
+54 silly addNameRange     '0.6.6',
+54 silly addNameRange     '0.6.7',
+54 silly addNameRange     '0.7.0',
+54 silly addNameRange     '0.7.1',
+54 silly addNameRange     '0.7.2',
+54 silly addNameRange     '0.7.3',
+54 silly addNameRange     '0.8.0',
+54 silly addNameRange     '0.8.1',
+54 silly addNameRange     '0.8.2',
+54 silly addNameRange     '0.8.3',
+54 silly addNameRange     '0.8.4',
+54 silly addNameRange     '0.8.5',
+54 silly addNameRange     '0.8.6',
+54 silly addNameRange     '0.9.0',
+54 silly addNameRange     '0.9.1',
+54 silly addNameRange     '0.9.2',
+54 silly addNameRange     '0.10.0',
+54 silly addNameRange     '0.10.1',
+54 silly addNameRange     '0.10.2',
+54 silly addNameRange     '0.10.3',
+54 silly addNameRange     '0.11.0',
+54 silly addNameRange     '0.12.0',
+54 silly addNameRange     '0.12.1',
+54 silly addNameRange     '1.0.0' ] ]
+55 silly addNamed redis@1.0.0
+56 verbose addNamed "1.0.0" is a plain semver version for redis
+57 silly mapToRegistry name redis
+58 silly mapToRegistry using default registry
+59 silly mapToRegistry registry https://registry.npmjs.org/
+60 silly mapToRegistry uri https://registry.npmjs.org/redis
+61 verbose addRemoteTarball https://registry.npmjs.org/redis/-/redis-1.0.0.tgz not in flight; adding
+62 verbose addRemoteTarball [ 'https://registry.npmjs.org/redis/-/redis-1.0.0.tgz',
+62 verbose addRemoteTarball   '5612d832b2535a8c0e8d81b42c63af330d3bb677' ]
+63 info retry fetch attempt 1 at 15:35:02
+64 info attempt registry request try #1 at 15:35:02
+65 http fetch GET https://registry.npmjs.org/redis/-/redis-1.0.0.tgz
+66 http fetch 200 https://registry.npmjs.org/redis/-/redis-1.0.0.tgz
+67 silly fetchAndShaCheck shasum 5612d832b2535a8c0e8d81b42c63af330d3bb677
+68 http 304 https://registry.npmjs.org/then-redis
+69 silly get cb [ 304,
+69 silly get   { date: 'Fri, 04 Sep 2015 06:35:02 GMT',
+69 silly get     via: '1.1 varnish',
+69 silly get     'cache-control': 'max-age=60',
+69 silly get     etag: '"519O7IO0WHGDJ9LYFVBGW07UF"',
+69 silly get     age: '0',
+69 silly get     connection: 'keep-alive',
+69 silly get     'x-served-by': 'cache-nrt6120-NRT',
+69 silly get     'x-cache': 'MISS',
+69 silly get     'x-cache-hits': '0',
+69 silly get     'x-timer': 'S1441348502.305695,VS0,VE595',
+69 silly get     vary: 'Accept' } ]
+70 verbose etag https://registry.npmjs.org/then-redis from cache
+71 verbose get saving then-redis to /Users/donglee/.npm/registry.npmjs.org/then-redis/.cache.json
+72 verbose addTmpTarball /var/folders/6j/fgj4_8sj6qldf0p52ztcvjlht5sy4j/T/npm-57804-1636e7a1/registry.npmjs.org/redis/-/redis-1.0.0.tgz not in flight; adding
+73 verbose addTmpTarball already have metadata; skipping unpack for redis@1.0.0
+74 silly addNameRange number 2 { name: 'then-redis', range: '*', hasData: true }
+75 silly addNameRange versions [ 'then-redis',
+75 silly addNameRange   [ '0.0.0',
+75 silly addNameRange     '0.1.0',
+75 silly addNameRange     '0.2.0',
+75 silly addNameRange     '0.3.0',
+75 silly addNameRange     '0.3.1',
+75 silly addNameRange     '0.3.2',
+75 silly addNameRange     '0.3.3',
+75 silly addNameRange     '0.3.4',
+75 silly addNameRange     '0.3.5',
+75 silly addNameRange     '0.3.6',
+75 silly addNameRange     '0.3.7',
+75 silly addNameRange     '0.3.8',
+75 silly addNameRange     '0.3.9',
+75 silly addNameRange     '0.3.10',
+75 silly addNameRange     '0.3.11',
+75 silly addNameRange     '0.3.12',
+75 silly addNameRange     '1.0.0',
+75 silly addNameRange     '1.0.1',
+75 silly addNameRange     '1.0.2',
+75 silly addNameRange     '1.0.3',
+75 silly addNameRange     '1.1.0',
+75 silly addNameRange     '1.2.0',
+75 silly addNameRange     '1.2.1',
+75 silly addNameRange     '1.2.2',
+75 silly addNameRange     '1.3.0' ] ]
+76 silly addNamed then-redis@1.3.0
+77 verbose addNamed "1.3.0" is a plain semver version for then-redis
+78 silly cache afterAdd then-redis@1.3.0
+79 verbose afterAdd /Users/donglee/.npm/then-redis/1.3.0/package/package.json not in flight; writing
+80 silly cache afterAdd redis@1.0.0
+81 verbose afterAdd /Users/donglee/.npm/redis/1.0.0/package/package.json not in flight; writing
+82 verbose afterAdd /Users/donglee/.npm/redis/1.0.0/package/package.json written
+83 verbose afterAdd /Users/donglee/.npm/then-redis/1.3.0/package/package.json written
+84 silly install resolved [ { name: 'redis',
+84 silly install resolved     version: '1.0.0',
+84 silly install resolved     description: 'Redis client library',
+84 silly install resolved     keywords: [ 'database', 'redis' ],
+84 silly install resolved     author: { name: 'Matt Ranney', email: 'mjr@ranney.com' },
+84 silly install resolved     license: 'MIT',
+84 silly install resolved     main: './index.js',
+84 silly install resolved     scripts:
+84 silly install resolved      { coverage: 'nyc report --reporter=text-lcov | coveralls',
+84 silly install resolved        test: 'nyc ./node_modules/.bin/_mocha ./test/*.js ./test/commands/*.js ./test/parser/*.js --timeout=8000' },
+84 silly install resolved     devDependencies:
+84 silly install resolved      { async: '^1.3.0',
+84 silly install resolved        colors: '~0.6.0-1',
+84 silly install resolved        coveralls: '^2.11.2',
+84 silly install resolved        hiredis: '^0.4.1',
+84 silly install resolved        metrics: '>=0.1.5',
+84 silly install resolved        mocha: '^2.2.5',
+84 silly install resolved        nyc: '^3.0.0',
+84 silly install resolved        'tcp-port-used': '^0.1.2',
+84 silly install resolved        underscore: '~1.4.4',
+84 silly install resolved        uuid: '^2.0.1' },
+84 silly install resolved     repository: { type: 'git', url: 'git://github.com/mranney/node_redis.git' },
+84 silly install resolved     gitHead: '25b4ddafaac17fa7ab7b7fd5522d564edd60a0cd',
+84 silly install resolved     bugs: { url: 'https://github.com/mranney/node_redis/issues' },
+84 silly install resolved     homepage: 'https://github.com/mranney/node_redis#readme',
+84 silly install resolved     _id: 'redis@1.0.0',
+84 silly install resolved     _shasum: '5612d832b2535a8c0e8d81b42c63af330d3bb677',
+84 silly install resolved     _from: 'redis@*',
+84 silly install resolved     _npmVersion: '2.13.3',
+84 silly install resolved     _nodeVersion: '3.2.0',
+84 silly install resolved     _npmUser: { name: 'bcoe', email: 'ben@npmjs.com' },
+84 silly install resolved     dist:
+84 silly install resolved      { shasum: '5612d832b2535a8c0e8d81b42c63af330d3bb677',
+84 silly install resolved        tarball: 'http://registry.npmjs.org/redis/-/redis-1.0.0.tgz' },
+84 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+84 silly install resolved     directories: {},
+84 silly install resolved     _resolved: 'https://registry.npmjs.org/redis/-/redis-1.0.0.tgz' },
+84 silly install resolved   { name: 'then-redis',
+84 silly install resolved     version: '1.3.0',
+84 silly install resolved     description: 'A small, promise-based Redis client',
+84 silly install resolved     main: 'index.js',
+84 silly install resolved     scripts: { test: 'jshint . && mocha --reporter spec \'tests/*-test.js\'' },
+84 silly install resolved     repository: { type: 'git', url: 'git://github.com/mjackson/then-redis.git' },
+84 silly install resolved     dependencies: { bluebird: '^2.3.11', 'describe-property': '^1.0.0' },
+84 silly install resolved     devDependencies:
+84 silly install resolved      { expect: '^1.1.0',
+84 silly install resolved        jshint: '^2.5.10',
+84 silly install resolved        mocha: '^2.0.1',
+84 silly install resolved        redis: '^0.12.1' },
+84 silly install resolved     peerDependencies: { redis: '^0.12.1' },
+84 silly install resolved     keywords: [ 'redis', 'then', 'promise', 'promises' ],
+84 silly install resolved     author: { name: 'Michael Jackson' },
+84 silly install resolved     license: 'MIT',
+84 silly install resolved     gitHead: 'ca6d0119fd9bbfb12e0ae59d5481131ea8f45e23',
+84 silly install resolved     bugs: { url: 'https://github.com/mjackson/then-redis/issues' },
+84 silly install resolved     homepage: 'https://github.com/mjackson/then-redis',
+84 silly install resolved     _id: 'then-redis@1.3.0',
+84 silly install resolved     _shasum: 'a6bd6793a833de947bdbf6994ffa8db5e4938dd6',
+84 silly install resolved     _from: 'then-redis@*',
+84 silly install resolved     _npmVersion: '2.1.17',
+84 silly install resolved     _nodeVersion: '0.10.28',
+84 silly install resolved     _npmUser: { name: 'mjackson', email: 'mjijackson@gmail.com' },
+84 silly install resolved     maintainers: [ [Object] ],
+84 silly install resolved     dist:
+84 silly install resolved      { shasum: 'a6bd6793a833de947bdbf6994ffa8db5e4938dd6',
+84 silly install resolved        tarball: 'http://registry.npmjs.org/then-redis/-/then-redis-1.3.0.tgz' },
+84 silly install resolved     directories: {},
+84 silly install resolved     _resolved: 'https://registry.npmjs.org/then-redis/-/then-redis-1.3.0.tgz',
+84 silly install resolved     readme: 'ERROR: No README data found!' } ]
+85 info install redis@1.0.0 into /Users/donglee/git/DefinitelyTyped
+86 info install then-redis@1.3.0 into /Users/donglee/git/DefinitelyTyped
+87 info installOne redis@1.0.0
+88 verbose installOne of redis to /Users/donglee/git/DefinitelyTyped not in flight; installing
+89 info installOne then-redis@1.3.0
+90 verbose installOne of then-redis to /Users/donglee/git/DefinitelyTyped not in flight; installing
+91 verbose lock using /Users/donglee/.npm/_locks/then-redis-3d4fe153afd77c27.lock for /Users/donglee/git/DefinitelyTyped/node_modules/then-redis
+92 verbose lock using /Users/donglee/.npm/_locks/redis-b2b83927297c644e.lock for /Users/donglee/git/DefinitelyTyped/node_modules/redis
+93 silly install write writing then-redis 1.3.0 to /Users/donglee/git/DefinitelyTyped/node_modules/then-redis
+94 silly install write writing redis 1.0.0 to /Users/donglee/git/DefinitelyTyped/node_modules/redis
+95 verbose unbuild node_modules/then-redis
+96 verbose unbuild node_modules/redis
+97 info preuninstall then-redis@1.3.0
+98 info preuninstall redis@0.12.1
+99 info uninstall then-redis@1.3.0
+100 info uninstall redis@0.12.1
+101 verbose unbuild rmStuff then-redis@1.3.0 from /Users/donglee/git/DefinitelyTyped/node_modules
+102 info postuninstall then-redis@1.3.0
+103 verbose unbuild rmStuff redis@0.12.1 from /Users/donglee/git/DefinitelyTyped/node_modules
+104 info postuninstall redis@0.12.1
+105 silly gentlyRm /Users/donglee/git/DefinitelyTyped/node_modules/then-redis is being purged from base /Users/donglee/git/DefinitelyTyped
+106 verbose gentlyRm don't care about contents; nuking /Users/donglee/git/DefinitelyTyped/node_modules/then-redis
+107 silly vacuum-fs purging /Users/donglee/git/DefinitelyTyped/node_modules/then-redis
+108 silly gentlyRm /Users/donglee/git/DefinitelyTyped/node_modules/redis is being purged from base /Users/donglee/git/DefinitelyTyped
+109 verbose gentlyRm don't care about contents; nuking /Users/donglee/git/DefinitelyTyped/node_modules/redis
+110 silly vacuum-fs purging /Users/donglee/git/DefinitelyTyped/node_modules/redis
+111 silly vacuum-fs quitting because other entries in /Users/donglee/git/DefinitelyTyped/node_modules
+112 verbose tar unpack /Users/donglee/.npm/redis/1.0.0/package.tgz
+113 verbose tar unpacking to /Users/donglee/git/DefinitelyTyped/node_modules/redis
+114 silly gentlyRm /Users/donglee/git/DefinitelyTyped/node_modules/redis is being purged
+115 verbose gentlyRm don't care about contents; nuking /Users/donglee/git/DefinitelyTyped/node_modules/redis
+116 silly gunzTarPerm modes [ '755', '644' ]
+117 silly gunzTarPerm extractEntry package.json
+118 silly vacuum-fs quitting because other entries in /Users/donglee/git/DefinitelyTyped/node_modules
+119 verbose tar unpack /Users/donglee/.npm/then-redis/1.3.0/package.tgz
+120 verbose tar unpacking to /Users/donglee/git/DefinitelyTyped/node_modules/then-redis
+121 silly gentlyRm /Users/donglee/git/DefinitelyTyped/node_modules/then-redis is being purged
+122 verbose gentlyRm don't care about contents; nuking /Users/donglee/git/DefinitelyTyped/node_modules/then-redis
+123 silly gunzTarPerm modes [ '755', '644' ]
+124 silly gunzTarPerm extractEntry .npmignore
+125 silly gunzTarPerm extractEntry README.md
+126 silly gunzTarPerm extractEntry package.json
+127 silly gunzTarPerm extractEntry .npmignore
+128 silly gunzTarPerm extractEntry README.md
+129 silly gunzTarPerm extractEntry connection_breaker.js
+130 silly gunzTarPerm extractEntry Client.js
+131 silly gunzTarPerm extractEntry index.js
+132 silly gunzTarPerm extractEntry index.js
+133 silly gunzTarPerm extractEntry coverage/lcov-report/prettify.js
+134 silly gunzTarPerm extractEntry coverage/lcov-report/sorter.js
+135 silly gunzTarPerm extractEntry dump.rdb
+136 silly gunzTarPerm extractEntry utils/Promise.js
+137 silly gunzTarPerm extractEntry utils/appendHashToArray.js
+138 silly gunzTarPerm extractEntry utils/parseInfo.js
+139 silly gunzTarPerm extractEntry coverage/lcov-report/__root__/index.html
+140 silly gunzTarPerm extractEntry coverage/lcov-report/__root__/index.js.html
+141 silly gunzTarPerm extractEntry coverage/lcov-report/base.css
+142 silly gunzTarPerm extractEntry coverage/lcov-report/index.html
+143 silly gunzTarPerm extractEntry coverage/lcov-report/lib/commands.js.html
+144 silly gunzTarPerm extractEntry coverage/lcov-report/lib/index.html
+145 silly gunzTarPerm extractEntry coverage/lcov-report/lib/parser/hiredis.js.html
+146 verbose write writing to /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/package.json
+147 info preinstall then-redis@1.3.0
+148 verbose readDependencies loading dependencies from /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/package.json
+149 silly gunzTarPerm extractEntry coverage/lcov-report/lib/parser/index.html
+150 silly prepareForInstallMany adding describe-property@^1.0.0 from then-redis dependencies
+151 silly prepareForInstallMany adding redis@^0.12.1 from then-redis peerDependencies
+152 warn peerDependencies The peer dependency redis@^0.12.1 included from then-redis will no
+153 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+154 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+155 verbose readDependencies loading dependencies from /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/package.json
+156 silly gunzTarPerm extractEntry coverage/lcov-report/lib/parser/javascript.js.html
+157 silly cache add args [ 'describe-property@^1.0.0', null ]
+158 verbose cache add spec describe-property@^1.0.0
+159 silly cache add parsed spec { raw: 'describe-property@^1.0.0',
+159 silly cache add   scope: null,
+159 silly cache add   name: 'describe-property',
+159 silly cache add   rawSpec: '^1.0.0',
+159 silly cache add   spec: '>=1.0.0 <2.0.0',
+159 silly cache add   type: 'range' }
+160 silly addNamed describe-property@>=1.0.0 <2.0.0
+161 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for describe-property
+162 silly addNameRange { name: 'describe-property',
+162 silly addNameRange   range: '>=1.0.0 <2.0.0',
+162 silly addNameRange   hasData: false }
+163 silly mapToRegistry name describe-property
+164 silly mapToRegistry using default registry
+165 silly mapToRegistry registry https://registry.npmjs.org/
+166 silly mapToRegistry uri https://registry.npmjs.org/describe-property
+167 verbose addNameRange registry:https://registry.npmjs.org/describe-property not in flight; fetching
+168 verbose request uri https://registry.npmjs.org/describe-property
+169 verbose request no auth needed
+170 info attempt registry request try #1 at 15:35:02
+171 verbose etag "D20S02FXYC16N6PZFZKG9MQYR"
+172 http request GET https://registry.npmjs.org/describe-property
+173 silly gunzTarPerm extractEntry coverage/lcov-report/lib/queue.js.html
+174 silly gunzTarPerm extractEntry coverage/lcov-report/lib/to_array.js.html
+175 silly gunzTarPerm extractEntry coverage/lcov-report/lib/util.js.html
+176 silly gunzTarPerm extractEntry coverage/lcov-report/prettify.css
+177 silly gunzTarPerm extractEntry coverage/lcov-report/sort-arrow-sprite.png
+178 silly gunzTarPerm extractEntry coverage/lcov.info
+179 silly gunzTarPerm extractEntry .travis.yml
+180 silly gunzTarPerm extractEntry lib/commands.js
+181 silly gunzTarPerm extractEntry lib/queue.js
+182 silly gunzTarPerm extractEntry lib/to_array.js
+183 silly gunzTarPerm extractEntry lib/util.js
+184 silly gunzTarPerm extractEntry lib/parser/hiredis.js
+185 silly gunzTarPerm extractEntry lib/parser/javascript.js
+186 silly gunzTarPerm extractEntry changelog.md
+187 silly gunzTarPerm extractEntry .nyc_output/15912.json
+188 silly gunzTarPerm extractEntry .nyc_output/15922.json
+189 silly gunzTarPerm extractEntry .nyc_output/15924.json
+190 silly gunzTarPerm extractEntry .nyc_output/15926.json
+191 silly gunzTarPerm extractEntry .nyc_output/15943.json
+192 silly gunzTarPerm extractEntry .nyc_output/15947.json
+193 silly gunzTarPerm extractEntry .nyc_output/15949.json
+194 verbose write writing to /Users/donglee/git/DefinitelyTyped/node_modules/redis/package.json
+195 info preinstall redis@1.0.0
+196 verbose readDependencies loading dependencies from /Users/donglee/git/DefinitelyTyped/node_modules/redis/package.json
+197 verbose readDependencies loading dependencies from /Users/donglee/git/DefinitelyTyped/node_modules/redis/package.json
+198 silly install resolved []
+199 verbose about to build /Users/donglee/git/DefinitelyTyped/node_modules/redis
+200 info build /Users/donglee/git/DefinitelyTyped/node_modules/redis
+201 info linkStuff redis@1.0.0
+202 silly linkStuff redis@1.0.0 has /Users/donglee/git/DefinitelyTyped/node_modules as its parent node_modules
+203 verbose linkBins redis@1.0.0
+204 verbose linkMans redis@1.0.0
+205 verbose rebuildBundles redis@1.0.0
+206 info install redis@1.0.0
+207 info postinstall redis@1.0.0
+208 verbose unlock done using /Users/donglee/.npm/_locks/redis-b2b83927297c644e.lock for /Users/donglee/git/DefinitelyTyped/node_modules/redis
+209 http 304 https://registry.npmjs.org/describe-property
+210 silly get cb [ 304,
+210 silly get   { date: 'Fri, 04 Sep 2015 06:35:03 GMT',
+210 silly get     via: '1.1 varnish',
+210 silly get     'cache-control': 'max-age=60',
+210 silly get     etag: '"D20S02FXYC16N6PZFZKG9MQYR"',
+210 silly get     age: '0',
+210 silly get     connection: 'keep-alive',
+210 silly get     'x-served-by': 'cache-nrt6123-NRT',
+210 silly get     'x-cache': 'MISS',
+210 silly get     'x-cache-hits': '0',
+210 silly get     'x-timer': 'S1441348503.128087,VS0,VE756',
+210 silly get     vary: 'Accept' } ]
+211 verbose etag https://registry.npmjs.org/describe-property from cache
+212 verbose get saving describe-property to /Users/donglee/.npm/registry.npmjs.org/describe-property/.cache.json
+213 silly addNameRange number 2 { name: 'describe-property',
+213 silly addNameRange   range: '>=1.0.0 <2.0.0',
+213 silly addNameRange   hasData: true }
+214 silly addNameRange versions [ 'describe-property', [ '1.0.0', '1.0.1', '1.1.0' ] ]
+215 silly addNamed describe-property@1.1.0
+216 verbose addNamed "1.1.0" is a plain semver version for describe-property
+217 silly cache afterAdd describe-property@1.1.0
+218 verbose afterAdd /Users/donglee/.npm/describe-property/1.1.0/package/package.json not in flight; writing
+219 verbose afterAdd /Users/donglee/.npm/describe-property/1.1.0/package/package.json written
+220 silly install resolved [ { name: 'describe-property',
+220 silly install resolved     version: '1.1.0',
+220 silly install resolved     description: 'Define JavaScript object properties quickly with ES5 defaults',
+220 silly install resolved     main: 'index.js',
+220 silly install resolved     scripts: { test: 'jshint . && mocha --reporter spec \'tests/*-test.js\'' },
+220 silly install resolved     repository:
+220 silly install resolved      { type: 'git',
+220 silly install resolved        url: 'git+https://github.com/mjackson/describe-property.git' },
+220 silly install resolved     keywords: [ 'property', 'properties', 'defineProperty', 'defineProperties' ],
+220 silly install resolved     author: { name: 'Michael Jackson' },
+220 silly install resolved     license: 'MIT',
+220 silly install resolved     bugs: { url: 'https://github.com/mjackson/describe-property/issues' },
+220 silly install resolved     homepage: 'https://github.com/mjackson/describe-property',
+220 silly install resolved     dependencies: { 'object-assign': '^2.0.0' },
+220 silly install resolved     devDependencies: { expect: '^1.3.0', jshint: '^2.5.11', mocha: '^2.1.0' },
+220 silly install resolved     gitHead: '56c6480116667a6b2dd51859c54278d804c23e0d',
+220 silly install resolved     _id: 'describe-property@1.1.0',
+220 silly install resolved     _shasum: 'bef31540227b51fe691b0c758f873d95b1b286d0',
+220 silly install resolved     _from: 'describe-property@>=1.0.0 <2.0.0',
+220 silly install resolved     _npmVersion: '2.1.17',
+220 silly install resolved     _nodeVersion: '0.10.28',
+220 silly install resolved     _npmUser: { name: 'mjackson', email: 'mjijackson@gmail.com' },
+220 silly install resolved     maintainers: [ [Object] ],
+220 silly install resolved     dist:
+220 silly install resolved      { shasum: 'bef31540227b51fe691b0c758f873d95b1b286d0',
+220 silly install resolved        tarball: 'http://registry.npmjs.org/describe-property/-/describe-property-1.1.0.tgz' },
+220 silly install resolved     directories: {},
+220 silly install resolved     _resolved: 'https://registry.npmjs.org/describe-property/-/describe-property-1.1.0.tgz',
+220 silly install resolved     readme: 'ERROR: No README data found!' } ]
+221 info install describe-property@1.1.0 into /Users/donglee/git/DefinitelyTyped/node_modules/then-redis
+222 info installOne describe-property@1.1.0
+223 verbose installOne of describe-property to /Users/donglee/git/DefinitelyTyped/node_modules/then-redis not in flight; installing
+224 verbose lock using /Users/donglee/.npm/_locks/describe-property-9350e8ee13d86a12.lock for /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property
+225 silly install write writing describe-property 1.1.0 to /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property
+226 verbose unbuild node_modules/then-redis/node_modules/describe-property
+227 silly gentlyRm /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property is being purged from base /Users/donglee/git/DefinitelyTyped
+228 verbose gentlyRm don't care about contents; nuking /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property
+229 verbose tar unpack /Users/donglee/.npm/describe-property/1.1.0/package.tgz
+230 verbose tar unpacking to /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property
+231 silly gentlyRm /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property is being purged
+232 verbose gentlyRm don't care about contents; nuking /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property
+233 silly gunzTarPerm modes [ '755', '644' ]
+234 silly gunzTarPerm extractEntry package.json
+235 silly gunzTarPerm extractEntry .npmignore
+236 silly gunzTarPerm extractEntry README.md
+237 silly gunzTarPerm extractEntry index.js
+238 verbose write writing to /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/package.json
+239 info preinstall describe-property@1.1.0
+240 verbose readDependencies loading dependencies from /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/package.json
+241 silly prepareForInstallMany adding object-assign@^2.0.0 from describe-property dependencies
+242 verbose readDependencies loading dependencies from /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/package.json
+243 silly cache add args [ 'object-assign@^2.0.0', null ]
+244 verbose cache add spec object-assign@^2.0.0
+245 silly cache add parsed spec { raw: 'object-assign@^2.0.0',
+245 silly cache add   scope: null,
+245 silly cache add   name: 'object-assign',
+245 silly cache add   rawSpec: '^2.0.0',
+245 silly cache add   spec: '>=2.0.0 <3.0.0',
+245 silly cache add   type: 'range' }
+246 silly addNamed object-assign@>=2.0.0 <3.0.0
+247 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for object-assign
+248 silly addNameRange { name: 'object-assign',
+248 silly addNameRange   range: '>=2.0.0 <3.0.0',
+248 silly addNameRange   hasData: false }
+249 silly mapToRegistry name object-assign
+250 silly mapToRegistry using default registry
+251 silly mapToRegistry registry https://registry.npmjs.org/
+252 silly mapToRegistry uri https://registry.npmjs.org/object-assign
+253 verbose addNameRange registry:https://registry.npmjs.org/object-assign not in flight; fetching
+254 verbose request uri https://registry.npmjs.org/object-assign
+255 verbose request no auth needed
+256 info attempt registry request try #1 at 15:35:03
+257 verbose etag "9Y072UXPGMKE8NKK9IQ13AUIG"
+258 http request GET https://registry.npmjs.org/object-assign
+259 http 304 https://registry.npmjs.org/object-assign
+260 silly get cb [ 304,
+260 silly get   { date: 'Fri, 04 Sep 2015 06:35:04 GMT',
+260 silly get     via: '1.1 varnish',
+260 silly get     'cache-control': 'max-age=60',
+260 silly get     etag: '"9Y072UXPGMKE8NKK9IQ13AUIG"',
+260 silly get     age: '18',
+260 silly get     connection: 'keep-alive',
+260 silly get     'x-served-by': 'cache-nrt6135-NRT',
+260 silly get     'x-cache': 'HIT',
+260 silly get     'x-cache-hits': '2',
+260 silly get     'x-timer': 'S1441348504.058268,VS0,VE0',
+260 silly get     vary: 'Accept' } ]
+261 verbose etag https://registry.npmjs.org/object-assign from cache
+262 verbose get saving object-assign to /Users/donglee/.npm/registry.npmjs.org/object-assign/.cache.json
+263 silly addNameRange number 2 { name: 'object-assign', range: '>=2.0.0 <3.0.0', hasData: true }
+264 silly addNameRange versions [ 'object-assign',
+264 silly addNameRange   [ '0.1.0',
+264 silly addNameRange     '0.1.1',
+264 silly addNameRange     '0.1.2',
+264 silly addNameRange     '0.2.0',
+264 silly addNameRange     '0.2.1',
+264 silly addNameRange     '0.2.2',
+264 silly addNameRange     '0.3.0',
+264 silly addNameRange     '0.3.1',
+264 silly addNameRange     '0.4.0',
+264 silly addNameRange     '1.0.0',
+264 silly addNameRange     '2.0.0',
+264 silly addNameRange     '3.0.0',
+264 silly addNameRange     '2.1.1',
+264 silly addNameRange     '4.0.0',
+264 silly addNameRange     '4.0.1' ] ]
+265 silly addNamed object-assign@2.1.1
+266 verbose addNamed "2.1.1" is a plain semver version for object-assign
+267 silly cache afterAdd object-assign@2.1.1
+268 verbose afterAdd /Users/donglee/.npm/object-assign/2.1.1/package/package.json not in flight; writing
+269 verbose afterAdd /Users/donglee/.npm/object-assign/2.1.1/package/package.json written
+270 silly install resolved [ { name: 'object-assign',
+270 silly install resolved     version: '2.1.1',
+270 silly install resolved     description: 'ES6 Object.assign() ponyfill',
+270 silly install resolved     license: 'MIT',
+270 silly install resolved     repository:
+270 silly install resolved      { type: 'git',
+270 silly install resolved        url: 'git+https://github.com/sindresorhus/object-assign.git' },
+270 silly install resolved     author:
+270 silly install resolved      { name: 'Sindre Sorhus',
+270 silly install resolved        email: 'sindresorhus@gmail.com',
+270 silly install resolved        url: 'http://sindresorhus.com' },
+270 silly install resolved     engines: { node: '>=0.10.0' },
+270 silly install resolved     scripts: { test: 'mocha' },
+270 silly install resolved     files: [ 'index.js' ],
+270 silly install resolved     keywords:
+270 silly install resolved      [ 'object',
+270 silly install resolved        'assign',
+270 silly install resolved        'extend',
+270 silly install resolved        'properties',
+270 silly install resolved        'es6',
+270 silly install resolved        'ecmascript',
+270 silly install resolved        'harmony',
+270 silly install resolved        'ponyfill',
+270 silly install resolved        'prollyfill',
+270 silly install resolved        'polyfill',
+270 silly install resolved        'shim',
+270 silly install resolved        'browser' ],
+270 silly install resolved     devDependencies: { mocha: '*' },
+270 silly install resolved     gitHead: '4cd0365f5a78dd369473ca0bbd31f7b234148c42',
+270 silly install resolved     bugs: { url: 'https://github.com/sindresorhus/object-assign/issues' },
+270 silly install resolved     homepage: 'https://github.com/sindresorhus/object-assign',
+270 silly install resolved     _id: 'object-assign@2.1.1',
+270 silly install resolved     _shasum: '43c36e5d569ff8e4816c4efa8be02d26967c18aa',
+270 silly install resolved     _from: 'object-assign@>=2.0.0 <3.0.0',
+270 silly install resolved     _npmVersion: '2.10.1',
+270 silly install resolved     _nodeVersion: '0.12.4',
+270 silly install resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+270 silly install resolved     dist:
+270 silly install resolved      { shasum: '43c36e5d569ff8e4816c4efa8be02d26967c18aa',
+270 silly install resolved        tarball: 'http://registry.npmjs.org/object-assign/-/object-assign-2.1.1.tgz' },
+270 silly install resolved     maintainers: [ [Object] ],
+270 silly install resolved     directories: {},
+270 silly install resolved     _resolved: 'https://registry.npmjs.org/object-assign/-/object-assign-2.1.1.tgz',
+270 silly install resolved     readme: 'ERROR: No README data found!' } ]
+271 info install object-assign@2.1.1 into /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property
+272 info installOne object-assign@2.1.1
+273 verbose installOne of object-assign to /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property not in flight; installing
+274 verbose lock using /Users/donglee/.npm/_locks/object-assign-98cdd1d13fbdd509.lock for /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules/object-assign
+275 silly install write writing object-assign 2.1.1 to /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules/object-assign
+276 verbose unbuild node_modules/then-redis/node_modules/describe-property/node_modules/object-assign
+277 silly gentlyRm /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules/object-assign is being purged from base /Users/donglee/git/DefinitelyTyped
+278 verbose gentlyRm don't care about contents; nuking /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules/object-assign
+279 verbose tar unpack /Users/donglee/.npm/object-assign/2.1.1/package.tgz
+280 verbose tar unpacking to /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules/object-assign
+281 silly gentlyRm /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules/object-assign is being purged
+282 verbose gentlyRm don't care about contents; nuking /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules/object-assign
+283 silly gunzTarPerm modes [ '755', '644' ]
+284 silly gunzTarPerm extractEntry package.json
+285 silly gunzTarPerm extractEntry index.js
+286 silly gunzTarPerm extractEntry license
+287 silly gunzTarPerm extractEntry readme.md
+288 verbose write writing to /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules/object-assign/package.json
+289 info preinstall object-assign@2.1.1
+290 verbose readDependencies loading dependencies from /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules/object-assign/package.json
+291 verbose readDependencies loading dependencies from /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules/object-assign/package.json
+292 silly install resolved []
+293 verbose about to build /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules/object-assign
+294 info build /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules/object-assign
+295 info linkStuff object-assign@2.1.1
+296 silly linkStuff object-assign@2.1.1 has /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules as its parent node_modules
+297 verbose linkBins object-assign@2.1.1
+298 verbose linkMans object-assign@2.1.1
+299 verbose rebuildBundles object-assign@2.1.1
+300 info install object-assign@2.1.1
+301 info postinstall object-assign@2.1.1
+302 verbose unlock done using /Users/donglee/.npm/_locks/object-assign-98cdd1d13fbdd509.lock for /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property/node_modules/object-assign
+303 verbose about to build /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property
+304 info build /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property
+305 info linkStuff describe-property@1.1.0
+306 silly linkStuff describe-property@1.1.0 has /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules as its parent node_modules
+307 verbose linkBins describe-property@1.1.0
+308 verbose linkMans describe-property@1.1.0
+309 verbose rebuildBundles describe-property@1.1.0
+310 verbose rebuildBundles [ 'object-assign' ]
+311 info install describe-property@1.1.0
+312 info postinstall describe-property@1.1.0
+313 verbose unlock done using /Users/donglee/.npm/_locks/describe-property-9350e8ee13d86a12.lock for /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/node_modules/describe-property
+314 verbose about to build /Users/donglee/git/DefinitelyTyped/node_modules/then-redis
+315 info build /Users/donglee/git/DefinitelyTyped/node_modules/then-redis
+316 info linkStuff then-redis@1.3.0
+317 silly linkStuff then-redis@1.3.0 has /Users/donglee/git/DefinitelyTyped/node_modules as its parent node_modules
+318 verbose linkBins then-redis@1.3.0
+319 verbose linkMans then-redis@1.3.0
+320 verbose rebuildBundles then-redis@1.3.0
+321 verbose rebuildBundles [ 'describe-property' ]
+322 info install then-redis@1.3.0
+323 info postinstall then-redis@1.3.0
+324 verbose readDependencies loading dependencies from /Users/donglee/git/DefinitelyTyped/package.json
+325 verbose readDependencies npm-shrinkwrap.json is overriding dependencies
+326 info shrinkwrap file "/Users/donglee/git/DefinitelyTyped/npm-shrinkwrap.json"
+327 verbose readDependencies returned deps { 'definition-tester': 'https://registry.npmjs.org/definition-tester/-/definition-tester-0.2.0.tgz',
+327 verbose readDependencies returned deps   typescript: 'https://registry.npmjs.org/typescript/-/typescript-1.5.3.tgz' }
+328 verbose targetResolver reading package data from /Users/donglee/git/DefinitelyTyped/node_modules/bluebird/package.json
+329 verbose targetResolver reading package data from /Users/donglee/git/DefinitelyTyped/node_modules/definition-tester/package.json
+330 verbose targetResolver reading package data from /Users/donglee/git/DefinitelyTyped/node_modules/redis/package.json
+331 verbose targetResolver reading package data from /Users/donglee/git/DefinitelyTyped/node_modules/then-redis/package.json
+332 verbose targetResolver reading package data from /Users/donglee/git/DefinitelyTyped/node_modules/typescript/package.json
+333 verbose targetResolver reading package data from /Users/donglee/git/DefinitelyTyped/node_modules/.bin/dt/package.json
+334 verbose targetResolver reading package data from /Users/donglee/git/DefinitelyTyped/node_modules/.bin/tsc/package.json
+335 verbose targetResolver reading package data from /Users/donglee/git/DefinitelyTyped/node_modules/.bin/tsserver/package.json
+336 verbose already installed skipping redis@^0.12.1 /Users/donglee/git/DefinitelyTyped
+337 silly install resolved []
+338 verbose unlock done using /Users/donglee/.npm/_locks/then-redis-3d4fe153afd77c27.lock for /Users/donglee/git/DefinitelyTyped/node_modules/then-redis
+339 verbose validateInstall loading /Users/donglee/git/DefinitelyTyped/package.json for validation
+340 verbose stack Error: The package redis does not satisfy its siblings' peerDependencies requirements!
+340 verbose stack     at /Users/donglee/.nvm/v0.10.36/lib/node_modules/npm/lib/install.js:125:32
+340 verbose stack     at /Users/donglee/.nvm/v0.10.36/lib/node_modules/npm/lib/install.js:267:7
+340 verbose stack     at /Users/donglee/.nvm/v0.10.36/lib/node_modules/npm/node_modules/read-installed/read-installed.js:138:5
+340 verbose stack     at /Users/donglee/.nvm/v0.10.36/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+340 verbose stack     at cb (/Users/donglee/.nvm/v0.10.36/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+340 verbose stack     at /Users/donglee/.nvm/v0.10.36/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+340 verbose stack     at cb (/Users/donglee/.nvm/v0.10.36/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+340 verbose stack     at /Users/donglee/.nvm/v0.10.36/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+340 verbose stack     at cb (/Users/donglee/.nvm/v0.10.36/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+340 verbose stack     at /Users/donglee/.nvm/v0.10.36/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+341 verbose cwd /Users/donglee/git/DefinitelyTyped/then-redis
+342 error Darwin 15.0.0
+343 error argv "node" "/Users/donglee/.nvm/v0.10.36/bin/npm" "install" "redis" "then-redis"
+344 error node v0.10.36
+345 error npm  v2.9.1
+346 error code EPEERINVALID
+347 error peerinvalid The package redis does not satisfy its siblings' peerDependencies requirements!
+347 error peerinvalid Peer then-redis@1.3.0 wants redis@^0.12.1
+348 verbose exit [ 1, true ]
