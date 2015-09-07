@@ -1,5 +1,5 @@
-// Type definitions for Mongoose 3.8.5
-// Project: http://mongoosejs.com/
+// Type definitions for Mongoose 4.1.5
+// Project: http://mongoosejs.com/docs/api.html
 // Definitions by: horiuchi <https://github.com/horiuchi/>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
 
@@ -212,9 +212,9 @@ declare module "mongoose" {
     findOneAndUpdate(cond: Object, update: Object, callback?: (err: any, res: T) => void): Query<T>;
     findOneAndUpdate(cond: Object, update: Object, options: FindAndUpdateOption, callback?: (err: any, res: T) => void): Query<T>;
 
-    geoNear(point: { type: string; coordinates: number[] }, options: Object, callback?: (err: any, res: T[]) => void): Query<T[]>;
-    geoNear(point: number[], options: Object, callback?: (err: any, res: T[]) => void): Query<T[]>;
-    geoSearch(cond: Object, options: GeoSearchOption, callback?: (err: any, res: T[]) => void): Query<T[]>;
+    geoNear(point: { type: string; coordinates: number[] }, options: Object, callback?: (err: any, res: T[]) => void): Promise<T[]>;
+    geoNear(point: number[], options: Object, callback?: (err: any, res: T[]) => void): Promise<T[]>;
+    geoSearch(cond: Object, options: GeoSearchOption, callback?: (err: any, res: T[]) => void): Promise<T[]>;
     increment(): T;
     mapReduce<K, V>(options: MapReduceOption<T, K, V>, callback?: (err: any, res: MapReduceResult<K, V>[]) => void): Promise<MapReduceResult<K, V>[]>;
     mapReduce<K, V>(options: MapReduceOption2<T, K, V>, callback?: (err: any, res: MapReduceResult<K, V>[]) => void): Promise<MapReduceResult<K, V>[]>;
@@ -224,8 +224,8 @@ declare module "mongoose" {
     populate<U>(doc: U[], options: Object, callback?: (err: any, res: U[]) => void): Promise<U[]>;
     update(cond: Object, update: Object, callback?: (err: any, affectedRows: number, raw: any) => void): Query<T>;
     update(cond: Object, update: Object, options: Object, callback?: (err: any, affectedRows: number, raw: any) => void): Query<T>;
-    remove(cond: Object, callback?: (err: any) => void): Query<{}>;
-    save(callback?: (err: any, result: T, numberAffected: number) => void): Query<T>;
+    remove(cond: Object, callback?: (err: any, res: T) => void): Promise<T>;
+    save(callback?: (err: any, result: T, numberAffected: number) => void): Promise<T>;
     where(path: string, val?: Object): Query<T[]>;
 
     $where(argument: string): Query<T>;
@@ -426,6 +426,7 @@ declare module "mongoose" {
     _id: Types.ObjectId;
 
     equals(doc: Document): boolean;
+    execPopulate(): Promise<any>;
     get(path: string, type?: new(...args: any[]) => any): any;
     inspect(options?: Object): string;
     invalidate(path: string, errorMsg: string, value: any): void;
@@ -441,7 +442,6 @@ declare module "mongoose" {
     populate<T>(opt: PopulateOption, callback?: (err: any, res: T) => void): Document;
     populated(path: string): any;
     remove<T>(callback?: (err: any) => void): Query<T>;
-    save<T>(callback?: (err: any, res: T) => void): void;
     set(path: string, val: any, type?: new(...args: any[]) => any, options?: Object): void;
     set(path: string, val: any, options?: Object): void;
     set(value: Object): void;
@@ -449,12 +449,14 @@ declare module "mongoose" {
     toObject(options?: Object): Object;
     toString(): string;
     update<T>(doc: Object, options: Object, callback: (err: any, affectedRows: number, raw: any) => void): Query<T>;
-    validate(cb: (err: any) => void): void;
+    validate(cb: (err: any) => void): Promise<any>;
+    validateSync(path: string | string[]): any;
 
     isNew: boolean;
     errors: Object;
     schema: Object;
   }
+
 
 
   export class Aggregate<T> {
