@@ -442,6 +442,7 @@ declare module "mongoose" {
     populate<T>(opt: PopulateOption, callback?: (err: any, res: T) => void): Document;
     populated(path: string): any;
     remove<T>(callback?: (err: any) => void): Query<T>;
+    save<T>(callback?: (err: any, res: T) => void): Promise<any>;
     set(path: string, val: any, type?: new(...args: any[]) => any, options?: Object): void;
     set(path: string, val: any, options?: Object): void;
     set(value: Object): void;
